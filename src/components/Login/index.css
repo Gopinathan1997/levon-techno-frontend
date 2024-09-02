@@ -1,0 +1,54 @@
+.bg-container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.form-container {
+  display: flex;
+  background-color: aliceblue;
+  flex-direction: column;
+  padding:20px 30px;
+  height: auto;
+  width: 40vw;
+  border-radius: 5px;
+}
+.login-img {
+  width: 50vw;
+}
+label {
+  align-self: flex-start;
+}
+.logo {
+  width: 25vw;
+}
+input {
+  font-size: large;
+  align-self: stretch;
+}
+.login-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+
+}
+.login-title{
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+label{
+  font-weight: bold;
+}
+.form-select{
+  display: inline-block;
+  width: 160px;
+  height: 34px;
+  line-height: 30px;
+  position: relative;
+}
+.input-container{
+  display: flex;
+  flex-direction: column;
+}
