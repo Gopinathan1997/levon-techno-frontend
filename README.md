@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+Student-Teacher Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple Student-Teacher Management System built using Express.js, SQLite, and React.js. The system allows users to manage students and teachers, view lists of both, and perform login operations.
+Features
 
-## Available Scripts
+    User Roles: Support for student and teacher roles.
+    User Management: Ability to create new users (students and teachers) with associated roles and additional details (grade for students, subject for teachers).
+    Data Display: Lists all students and teachers separately on the frontend.
+    Login: Basic login functionality for users.
 
-In the project directory, you can run:
+Project Structure
 
-### `npm start`
+bash
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- backend/
+  - database.db          # SQLite database file
+  - index.js            # Express server setup and API routes
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- frontend/
+  - src/
+    - components/
+      - index.js     # React component for displaying user dashboard
+      - index.js     # React component for displaying Login dashboard
+      - NewUserForm.js   # React component for creating new users
+    - index.js           # Main entry point for React application
+    - App.js             # Main application component
 
-### `npm test`
+- README.md              # Project documentation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Getting Started
+Prerequisites
 
-### `npm run build`
+    Node.js (v14 or later)
+    npm (v6 or later)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    Clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    bash
 
-### `npm run eject`
+git clone https://github.com/your-username/student-teacher-management.git
+cd student-teacher-management
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Backend Setup:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+bash
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    cd backend
+    npm install
+    node server.js
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This will start the Express server on http://localhost:3001.
 
-## Learn More
+Frontend Setup:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+bash
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    cd ../frontend
+    npm install
+    npm start
 
-### Code Splitting
+    This will start the React development server on http://localhost:3000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Usage
 
-### Analyzing the Bundle Size
+    Create Users: Use the NewUserForm component in the frontend to create new users. You can specify whether the user is a student or a teacher and provide additional details accordingly.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    View Users: The Scheduler component displays the list of students and teachers.
 
-### Making a Progressive Web App
+    Login: Users can log in using their username, password, and role.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+API Endpoints
 
-### Advanced Configuration
+    POST /login: Authenticate users.
+    GET /students: Retrieve all students.
+    GET /teachers: Retrieve all teachers.
+    POST /students: Create a new student.
+    POST /teachers: Create a new teacher.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Technologies Used
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    Backend: Node.js, Express.js, SQLite
+    Frontend: React.js
